@@ -1,0 +1,24 @@
+body {
+    background-color: #282a36;
+    position: relative; /* usually the parent, in this case the body element, has position relative so that the absolute positioned child is positioned relative to it */
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0; /* recommended */
+}
+
+h1 {
+    font-family: roboto, serif;
+    color: #f8f8f2;
+    font-size: 500%;
+    position: absolute; /* taken out of the normal flow of the document */
+    top: 50%; /* moved down by 50% of the screen height */
+    transform: translateY(-50%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+    width: 100%; /* needs to be defined to keep the default block behavior */
+    text-align: center;
+    margin: 0; /* again, for perfect center */
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("../font/roboto.ttf");
+    font-weight: bold;
+}
