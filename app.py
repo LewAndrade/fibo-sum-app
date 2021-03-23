@@ -14,7 +14,8 @@ def fib_sum(number: int):
 
     def _fib_sum(n: int):
         if n < 2:
-            return n
+            cache[n] = n
+            return cache[n]
         cache[n] = _fib_sum(n - 1) + _fib_sum(n - 2) + 1
         return cache[n]
 
